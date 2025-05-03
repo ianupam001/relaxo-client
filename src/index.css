@@ -1,0 +1,621 @@
+*{
+  margin: 0%;
+  padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+ 
+}
+p{
+  font-size: 12px;
+  font-family: "Roboto", sans-serif; 
+  word-wrap: break-word;
+}
+.fs14{
+font-size: 14pX !important;
+}
+.space{
+  display: flex;
+  width: 100%;
+  margin : 30px 0 ;
+}
+.text-center{
+text-align: center;
+}
+body, html {
+overflow-x: hidden; /* Hides horizontal scrollbar */
+}
+.justify-content-end{
+justify-content: end;
+}
+.justify-content-center{
+justify-content: center;
+}
+#main-home{
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+
+.main-mobilecheck{
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translate(0px, -100px);
+}
+.main-mobilecheck p{
+  font-size: 32px;
+  text-align: center;
+
+  font-weight: 800;
+  color: rgb(4, 49, 64);
+}
+
+/* Form detail  */
+
+.form-container {
+  /* background-color: white; */
+  /* padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+  width: 250px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.form-container label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #072654;
+  text-align: left;
+  font-size: 20px;
+}
+
+.form-container input[type="text"] {
+  width: 91%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 15px 10px;
+  background-color: #072654;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #001f3f;
+}
+.home-logo{
+  width: 70%;
+}
+
+/* Form detail  */
+/* -------------------------------------------------- 
+****************Bill Page Starts*********************
+-----------------------------------------------------*/
+#bill-desk{
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.main-bill-container{
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+position: relative;
+}
+h2, h3 {
+  text-align: center;
+  margin: 5px 0;
+}
+.center {
+  text-align: center;
+}
+.section {
+  border-top: 1px dashed #aaa;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+td, th {
+  padding: 4px 0;
+}
+.bold {
+  font-weight: bold;
+}
+.loyalty td {
+  padding: 2px 0;
+}
+.footer {
+  margin-top: 20px;
+  text-align: center;
+}
+.btn {
+  display: inline-block;
+  background-color: #00b32c;
+  color: white;
+  padding: 8px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.logo {
+  margin-top: 20px;
+  text-align: left;
+}
+.btn-2{
+  padding: 15px 10px;
+}
+
+
+
+.bill-head{
+  padding: 20px 0;
+  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+}
+
+
+/* Slider on header  */
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: #ffffff;
+}
+.slide .head-sec{
+  display: flex;
+  justify-content:space-between;
+  padding: 20px 20px 20px 0px;
+  
+}
+.slide .slide2-data{
+  display: flex;
+  padding: 20px 20px 20px 50px;
+  width: 100%;
+
+}
+.relaxo-logo-bill-generator{
+  width: 40%;
+}
+.slide:nth-child(2) {
+  background: #ffffff;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  font-family: cursive;
+  color: #a7a7a7;
+  border: none;
+ 
+  cursor: pointer;
+  z-index: 10;
+  background: transparent;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+.arrow.hidden {
+  display: none;
+}
+/* Slider on header ends */
+
+/* Popup style */
+.stars {
+background: #f2f5f8;
+padding: 20px 0 ;
+width: 100%;
+text-align: center;
+box-shadow:  inset 0px 11px 8px -10px #CCC; 
+height: 60px;
+}
+
+.stars h2 {
+margin-bottom: 15px;
+}
+
+.stars p {
+text-align: center;
+}
+
+.star {
+font-size: 28px;
+color: #e0e0e0;
+cursor: pointer;
+transition: color 0.3s;
+}
+.star-img{
+width: 20px;
+padding: 5px;
+}
+.stars .feedtext{
+display: block;
+width: 100%;
+margin-bottom: 10px;
+font-size: 18px;
+}
+.star.active {
+color: #ffdc65;
+}
+
+/* Popup styles */
+.popup-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.5);
+display: none;
+justify-content: center;
+align-items: center;
+}
+
+.popup {
+background: white;
+/* padding: 20px; */
+border-radius: 7px;
+width: 290px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+position: relative;
+
+}
+
+.popup textarea {
+width: -webkit-fill-available;
+  margin: 40px 20px 30px 20px;
+  position: relative;
+  height: 80px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  margin-bottom: 10px;
+}
+
+.popup .submit-btn {
+background-color: #4CAF50;
+color: white;
+border: none;    
+width: 100%;
+padding: 10px 20px;
+margin-top: 10px;
+border-radius: 0 0 5px 5px;
+cursor: pointer;
+}
+
+.popup .submit-btn:hover {
+background-color: #45a049;
+}
+
+.close-btn {
+position: absolute;
+top: 8px;
+right: 12px;
+font-size: 18px;
+font-weight: bold;
+color: #888;
+cursor: pointer;
+}
+
+.close-btn:hover {
+color: #000;
+}
+/* Popup style ends */
+
+/* *******************************************
+--------------Bill body Starts---------------- 
+***********************************************/
+.mt18{
+margin-top: 18px;
+}
+.wid100{
+width: 100%;
+}
+.flexrow{
+display: flex;
+}
+.dcol1{
+/* width: 25%; */
+}
+
+.dcol2{
+width: 74%;
+}
+.mb10{
+margin-top: 8px;
+}
+.wt600{
+font-weight: 600;
+}
+
+.bill-body{
+display: flex;
+width: 100%;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+.bill-body .heading1{
+font-size: 14px;
+font-weight: 600;
+text-align: center;
+
+
+}
+.uppercase{
+text-transform: uppercase;
+}
+.content1{
+font-size: 12px;
+font-weight: 400;
+text-align: left;
+margin: 0;
+text-wrap-mode: wrap;
+}
+.content2{
+font-size: 12px;
+font-weight: 400;
+text-align: center;
+margin: 0;
+display: flex;
+width: 100%;
+margin-top: 10px;
+justify-content: center;
+text-wrap-mode: wrap;
+}
+
+.dashed-line {
+border: none;
+/* border-top: 1px dashed #ccc; */
+margin: 30px 0;
+width: 100%;
+background-image: linear-gradient(to right, #ccc 33%, rgba(255,255,255,0) 0%);
+background-position: top; 
+background-size: 12px 1px; /* Increase 20px for more gap between dashes */
+background-repeat: repeat-x;
+margin: 10px 0;
+height: 2px;
+}
+.bill-part1{
+display: flex;
+flex-direction: column;
+width: 100%;
+}
+
+.tblcontainer{
+  width: 100%;
+padding: 5px;
+
+}
+.concont{
+display: flex;
+
+}
+
+/* *******************************************
+--------------Bill body Ends---------------- 
+***********************************************/
+
+
+/* -------------------------------------------------- 
+****************Bill footer Starts *********************
+-----------------------------------------------------*/
+.bill-footer{
+width: 100%;
+display: flex;
+flex-direction: column;
+position: relative;
+}
+.fpart1{
+display: flex;
+justify-content: center;
+align-content:center ;
+padding: 10%;
+background-color:#f2f5f8 ;
+margin-bottom: 70px;
+
+}
+.fpart1 img{
+width: 50%;  
+
+}
+.fpart2{
+display: flex;
+justify-content: center;
+align-content:center ;
+padding: 10px;
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+position: fixed;
+bottom: 0;
+width: 330px;
+background-color: #fff;
+}
+.downloadpdf-button{
+width: 80%;
+padding: 15px 0;
+background-color: #00b32c;
+color: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* popup footer
+*/
+.myPopup__overlay {
+position: fixed;
+top: 0; left: 0;
+width: 100%; height: 100%;
+background: rgba(0, 0, 0, 0.6);
+display: none;
+justify-content: center;
+align-items: center;
+z-index: 9999;
+}
+
+.myPopup__box {
+background: #fff;
+/* padding: 20px 25px; */
+border-radius: 10px;
+max-width: 350px;
+width: 100%;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+position: relative;
+}
+
+.myPopup__box .headerp{
+display: flex ;
+    position: absolute;
+    height: 80px;
+    top: 0;
+    background: #e3f4f7;
+    width: 100%;
+    left: 0;
+    border-radius: 10px 10px 0 0 ;
+    justify-content: center;
+    padding: 10px 0;
+    align-items: center;
+}
+.myPopup__box .headerp img{
+  max-width: 60px;
+  
+  height: 60px;
+}
+.myPopup__box .inputcontainer{
+  margin-top: 120px;
+}
+
+.input_choice_container{
+padding: 10px ;
+}
+.margin_hr{
+margin: 15px 0;
+}
+.poppu_buttonbox{
+margin-top: 20px;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.myPopup__submit-btn01,
+.myPopup__submit-btn02{
+width: 50%;
+padding: 15px;
+
+border: none;
+
+}
+.myPopup__submit-btn01{
+background-color: #fff;
+
+border-radius: 0 0 0 10px;
+color: #ff7777;
+}
+.myPopup__submit-btn02{
+background-color: #00be18;
+border-radius: 0 0 10px 0;
+color: #fff;
+}
+.myPopup__close-x {
+position: absolute;
+top: 10px;
+right: 15px;
+font-size: 20px;
+color: #999;
+cursor: pointer;
+font-weight: bold;
+z-index: 90;
+}
+
+.myPopup__submit-btn {
+background: #3498db;
+color: white;
+border: none;
+padding: 10px 18px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 14px;
+margin-top: 20px;
+}
+
+a.myPopup__trigger {
+display: inline-block;
+margin: 10px;
+color: #3498db;
+text-decoration: underline;
+cursor: pointer;
+}
+.btn02{}
+
+
+/* -------------------------------------------------- 
+****************Bill footer Ends*********************
+-----------------------------------------------------*/
+
+
+/* -------------------------------------------------- 
+****************Bill Page Ends*********************
+-----------------------------------------------------*/
+
+
+

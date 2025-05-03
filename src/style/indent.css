@@ -1,0 +1,205 @@
+.relaxo{
+  display: flex;
+  align-items: center;
+  width: 350px;
+  margin: 0 auto;
+  padding: 20px;
+  /* background-color: aqua; */
+ padding: 0;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.billHead{
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0px 20px 0px;
+}
+.billHead img {
+  width: 40%;
+
+}
+.billHead span {
+  font-size: 12px;
+}
+/* stars */
+.stars{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:#f2f5f8;
+  gap: 5px;
+  padding: 20px 0px 20px 0px ;
+}
+.stars span{
+  font-size: 18px;
+}
+.content2 {
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  justify-content: center;
+  text-wrap: wrap;
+  padding-bottom: 20px;
+}
+.uppercase
+{
+  text-transform: uppercase;
+  text-align: center;
+}
+.mb10
+{
+margin-bottom: 8px;
+}
+.wid100
+{
+  width:100%;
+}
+.mt18
+{
+  margin-top: 16px;
+}
+.fs
+{
+  font-size: 14px !important;
+}
+.flexrow {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 6px;
+  width: 100%;
+}
+p{
+  font-family: "Roboto",sans-serif;
+  word-wrap: break-word;
+  text-align: center;
+  font-size: 12px;
+}
+.bill-body
+ {
+width: 100%;  
+display: flex;
+flex-direction: column;
+align-items: center;
+border-bottom: 1px dashed black;
+}
+.dcol1 {
+  flex: 0 0 99px; /* Fixed width for label column */
+  text-align: left;
+  font-weight: 600;
+}
+
+.dcol2 {
+ /* Remaining space for value column */
+  text-align: left;
+  max-width: 100%;
+}
+
+.value {
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.5;
+  margin-top: 0px;
+}
+.wt600
+{
+  font-weight: 600;
+}
+ * { margin: 0%;
+  padding:0;
+}
+.content1{
+  
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    text-wrap: wrap;
+}
+.concont {
+  display: flex
+;
+}
+.justify-content-end {
+  justify-content: end;
+}
+.tblcontainer
+{
+  padding:5px;
+  width: 100%;
+  border-bottom: 1px dashed black;
+
+}
+td, th {
+  padding: 4px 0;
+}
+table{
+  width: 100%;
+  border-collapse:collapse ;
+  font-size: 12px;
+}
+.justify-content-center{
+  justify-content: center;
+}
+.bill-footer {
+  width: 100%;
+  display: flex
+;
+  flex-direction: column;
+  position: relative;
+}
+.fpart1 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 10%;
+  background-color: #f2f5f8;
+  margin-bottom: 70px;
+ 
+}
+.fpart1 img{
+  width: 50%;
+}
+.fpart2 {
+  display: flex
+;
+  justify-content: center;
+  align-content: center;
+  padding: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  position: fixed;
+  bottom: 0;
+  width: 330px;
+
+  }
+.downloadpdf-button {
+  width: 80%;
+  padding: 15px 0;
+  background-color: #00b32c;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: underline;
+}
+
+
+
+
+
+

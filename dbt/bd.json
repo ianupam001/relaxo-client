@@ -1,0 +1,84 @@
+
+{
+  "sms": "true",
+  "email": "false",
+  "customerData": {
+    "phone": "9412153811"
+  },
+  "loyaltyData": {
+    "cardNum": "L00051313",
+    "cardHolderName": "vineet gupta",
+    "pointsEarned": 6.0,
+    "pointsRedeemed": 0.0,
+    "pointsAvailable": 12.0,
+    "pointsBalance": 18.0
+  },
+  "storeData": {
+    "storeAddress": "SHOP AT PLOT NO. AE - 22 A & B, KANTH ROAD CIVIL LINES, MORADABAD UTTAR P.",
+    "pinCode": "2440001",
+    "storeNumberPrimary": "0591-2975700 ",
+    "displayAddress": "MORADABAD CIVIL LINES NEW",
+    "storeGstNumber": "09AAACR0259D1ZO"
+  },
+  "companyData": {
+    "name": "Relaxo Footwears Limited",
+    "address": "Aggarwal City Square,  District Centre, Manglam Palace, Sector-3, Rohini, DELHI",
+    "pinCode": "110085",
+    "cin": "L74899DL1984PLC019097",
+    "localCompanyAddress": "Shop No.-17,24,24A,27 & 27A, GF, Kumar Residency Plaza, Plot No-ML 01,Sec –11, Vasundhra, Gaziabad U.P."
+  },
+  "transactionalData": {
+    "invoiceType": "Tax Invoice",
+    "invoiceNumber": "02223R495005669",
+    "invDate": "16/09/2022",
+    "invTime": "11:54:11 AM",
+    "transactionType": "BM"
+  },
+  "paymentData": {
+    "paymentMethods": [
+      {
+        "name": "Cash",
+        "amount": 628.5
+      }
+    ],
+    "status": "paid"
+  },
+  "billAmountData": {
+    "totalQty": 2.0,
+    "netPayableAmount": 628.50,
+    "saleCurrency": "INR",
+    "amountInWords": "**** SIX HUNDRED TWENTY EIGHT RUPEES AND FIFTY  PAISA ONLY"
+  },
+  "taxesData": {
+    "distributedTax": [
+      {
+        "taxableAmount": 578.96,
+        "cgst": 24.77,
+        "sgst": 24.77
+      }
+    ]
+  },
+  "billFooterData": {
+    "disclaimer": "All prices are inclusive of GST. Subject to Delhi Jurisdiction."
+  },
+  "productsData": [
+    {
+      "name": "BHG-127 SUPER GENTS 11,BLACK YELLOW",
+      "productCode": "I0072897",
+      "quantity": 1.0,
+      "unitAmount": 329.5,
+      "totalAmount": 329.5,
+      "hsnCode": "64022090",
+      "gstPercent": "12"
+    },
+    {
+      "name": "LOAFER SOCKS M3 GENTS ",
+      "productCode": "I0052749",
+      "quantity": 1.0,
+      "unitAmount": 299.0,
+      "totalAmount": 299.0,
+      "hsnCode": "61151100",
+      "gstPercent": "5"
+    }
+  ]
+}
