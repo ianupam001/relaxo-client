@@ -83,15 +83,13 @@ const DigitalBillViewer = () => {
     try {
       const payload = {
         phone: bill?.customerData?.phone,
-        rating,
-        feedback,
+        stars:rating,
+        message:feedback,
         bill_id: bill?._id,
       };
       const res = await axios.post(
         "https://relaxobilling.onrender.com/api/feedback",
-        {
-          payload,
-        }
+        payload
       );
       setFeedbackSubmitted(true);
       closePopup();
