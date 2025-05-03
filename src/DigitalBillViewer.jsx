@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState, useRef } from "react";
 import logo from "./logo.svg";
 import { useSearchParams } from "react-router-dom";
@@ -17,6 +15,7 @@ const DigitalBillViewer = () => {
   const [rating, setRating] = useState(0);
   const [feedback, setFeedback] = useState("");
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false);
+  const [noData, setNoData] = useState(false);
 
   const contact = searchParams.get("contact");
 
@@ -31,7 +30,7 @@ const DigitalBillViewer = () => {
       if (res.data && res.data.length > 0) {
         setBill(res.data[0]);
       } else {
-        setError("No bill found for this contact");
+        setNoData(true);
       }
     } catch (err) {
       setError("Error fetching bill data");
@@ -191,12 +190,169 @@ const DigitalBillViewer = () => {
     }
   };
 
+  const NoDataFound = () => (
+    <div
+      className="no-data-container"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: "300px",
+        padding: "20px",
+        textAlign: "center",
+        backgroundColor: "#f9f9f9",
+        borderRadius: "8px",
+        border: "1px solid #eaeaea",
+        margin: "20px auto",
+        maxWidth: "500px",
+      }}
+    >
+      <img
+        src={logo || "/placeholder.svg"}
+        alt="Relaxo Logo"
+        style={{
+          width: "120px",
+          marginBottom: "20px",
+        }}
+      />
+      <h2
+        style={{
+          fontSize: "24px",
+          color: "#333",
+          marginBottom: "10px",
+        }}
+      >
+        No Bill Data Found
+      </h2>
+      <p
+        style={{
+          fontSize: "16px",
+          color: "#666",
+          marginBottom: "20px",
+        }}
+      >
+        {contact
+          ? `We couldn't find any bill data for the contact number: ${contact}`
+          : "No contact number provided. Please provide a valid contact number."}
+      </p>
+      <p
+        style={{
+          fontSize: "14px",
+          color: "#888",
+        }}
+      >
+        If you believe this is an error, please contact customer support.
+      </p>
+    </div>
+  );
+
+  const LoadingDisplay = () => (
+    <div
+      className="loading-container"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: "300px",
+        padding: "20px",
+      }}
+    >
+      <div
+        className="loading-spinner"
+        style={{
+          border: "6px solid #f3f3f3",
+          borderTop: "6px solid #3498db",
+          borderRadius: "50%",
+          width: "50px",
+          height: "50px",
+          animation: "spin 2s linear infinite",
+        }}
+      ></div>
+      <style>
+        {`
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        `}
+      </style>
+      <p
+        style={{
+          marginTop: "20px",
+          fontSize: "18px",
+          color: "#555",
+        }}
+      >
+        Loading bill data...
+      </p>
+    </div>
+  );
+
+  const ErrorDisplay = () => (
+    <div
+      className="error-container"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: "300px",
+        padding: "20px",
+        textAlign: "center",
+        backgroundColor: "#fff0f0",
+        borderRadius: "8px",
+        border: "1px solid #ffcaca",
+        margin: "20px auto",
+        maxWidth: "500px",
+      }}
+    >
+      <h2
+        style={{
+          fontSize: "24px",
+          color: "#d32f2f",
+          marginBottom: "10px",
+        }}
+      >
+        Error
+      </h2>
+      <p
+        style={{
+          fontSize: "16px",
+          color: "#666",
+          marginBottom: "20px",
+        }}
+      >
+        {error}
+      </p>
+      <button
+        style={{
+          padding: "10px 20px",
+          backgroundColor: "#2196f3",
+          color: "white",
+          border: "none",
+          borderRadius: "4px",
+          cursor: "pointer",
+          fontSize: "16px",
+        }}
+        onClick={() => contact && fetchData(contact)}
+      >
+        Try Again
+      </button>
+    </div>
+  );
+
+  if (noData) {
+    return <NoDataFound />;
+  }
+
   if (loading) {
-    return <div className="loading-container">Loading bill data...</div>;
+    return <LoadingDisplay />;
   }
 
   if (error) {
-    return <div className="error-container">{error}</div>;
+    return <ErrorDisplay />;
   }
 
   if (!bill) {
