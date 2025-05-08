@@ -4,7 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import axios from "axios";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
-
+const baseUrl = `http://20.204.134.0/server/api`;
 const DigitalBillViewer = () => {
   // Slider state
   const [slideIndex, setSlideIndex] = useState(0);
@@ -24,9 +24,7 @@ const DigitalBillViewer = () => {
   const fetchData = async (phone) => {
     try {
       setLoading(true);
-      const res = await axios.get(
-        `https://relaxobilling.onrender.com/api/bills/${phone}`
-      );
+      const res = await axios.get(`${baseUrl}/bills/${phone}`);
       if (res.data && res.data.length > 0) {
         setBill(res.data[0]);
       } else {
@@ -83,14 +81,11 @@ const DigitalBillViewer = () => {
     try {
       const payload = {
         phone: bill?.customerData?.phone,
-        stars:rating,
-        message:feedback,
+        stars: rating,
+        message: feedback,
         bill_id: bill?._id,
       };
-      const res = await axios.post(
-        "https://relaxobilling.onrender.com/api/feedback",
-        payload
-      );
+      const res = await axios.post(`${baseUrl}/feedback`, payload);
       setFeedbackSubmitted(true);
       closePopup();
     } catch (err) {
@@ -102,7 +97,7 @@ const DigitalBillViewer = () => {
   // Submit without feedback
   const submitWithoutFeedback = async () => {
     try {
-      await axios.post("https://relaxobilling.onrender.com/api/feedback", {
+      await axios.post(`${baseUrl}/feedback`, {
         billId: bill?._id,
         rating,
         feedback: "",
